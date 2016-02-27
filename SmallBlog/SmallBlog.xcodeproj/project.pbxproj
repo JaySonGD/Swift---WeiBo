@@ -401,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SmallBlog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CZ.SmallBlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SmallBlog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CZ.SmallBlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,6 +487,7 @@
 				ABADB5541C813D9500BA8907 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABADB5551C813D9500BA8907 /* Build configuration list for PBXNativeTarget "SmallBlogTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +496,7 @@
 				ABADB5571C813D9500BA8907 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABADB5581C813D9500BA8907 /* Build configuration list for PBXNativeTarget "SmallBlogUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +505,7 @@
 				ABADB55A1C813D9500BA8907 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

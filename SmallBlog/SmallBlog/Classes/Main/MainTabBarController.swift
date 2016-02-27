@@ -10,47 +10,98 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
+    // MARK: - 数组
+    let itemsInfo = ["tabbar_home","tabbar_message_center","","tabbar_discover","tabbar_profile"]
+    
+    
+    // ********************************************************************************************************
+    // MARK: - < 系统方法 >
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        
+//        let homeVC = HomeViewController()
+//        addChildViewController(homeVC,imageName: "tabbar_home",title: "首页")
+//        
+//        let messageVC = MessageViewController()
+//        addChildViewController(messageVC,imageName: "tabbar_message_center",title: "消息")
+//
+//        let discoverVC = DiscoverViewController()
+//        addChildViewController(discoverVC,imageName: "tabbar_discover",title: "发现")
+//
+//        let profileVC = ProfileViewController()
+//        addChildViewController(profileVC,imageName: "tabbar_profile",title: "我的")
         
-        let homeVC = HomeViewController()
-        addChildViewController(homeVC,imageName: "tabbar_home",title: "首页")
+        let btn = UIButton(type: .Custom)
+        btn.setBackgroundImage(UIImage(named:"tabbar_compose_button" ), forState: .Normal)
+        btn.setBackgroundImage(UIImage(named:"tabbar_compose_button_highlighted" ), forState: .Highlighted)
         
-        let messageVC = MessageViewController()
-        addChildViewController(messageVC,imageName: "tabbar_message_center",title: "消息")
+        btn.setImage(UIImage(named:"tabbar_compose_icon_add" ), forState: .Normal)
+        btn.setImage(UIImage(named:"tabbar_compose_icon_add_highlighted" ), forState: .Highlighted)
 
-        let discoverVC = DiscoverViewController()
-        addChildViewController(discoverVC,imageName: "tabbar_discover",title: "发现")
-
-        let profileVC = ProfileViewController()
-        addChildViewController(profileVC,imageName: "tabbar_profile",title: "我的")
-
+        btn.sizeToFit()
+        btn.center = CGPoint(x: tabBar.center.x, y: tabBar.frame.size.height * 0.5)
+        btn.addTarget(self, action: Selector("composeClick"), forControlEvents: .TouchUpInside)
+        
+        tabBar.addSubview(btn)
 
         
     }
     
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        addItems()
+    }
     
     // ********************************************************************************************************
-    // MARK: - < addChildViewController >
+    // MARK: - < 事件处理 >
     
-    private func addChildViewController(childVC: UIViewController ,imageName: String ,title: String)
-    {
-        let navVC = MainNavigationController(rootViewController: childVC)
-        childVC.navigationItem.title = title
-        navVC.tabBarItem.title = title
-        navVC.tabBarItem.image = UIImage(named:imageName )?.imageWithRenderingMode(.AlwaysOriginal)
-        navVC.tabBarItem.selectedImage = UIImage(named: imageName + "_highlighted")?.imageWithRenderingMode(.AlwaysOriginal)
-        addChildViewController(navVC)
+    @objc private func composeClick(){
+        
+      print("000")
     }
+
+    
+    
+    // ********************************************************************************************************
+    // MARK: - < 自定义方法 >
+    
+    private func addItems(){
+        
+        
+        for i in 0..<(tabBar.items?.count)!{
+            
+            
+            let item = tabBar.items![i]
+            
+            if i == 2{
+                item.enabled = !true
+                continue
+            }
+            
+            //item.title = title
+            item.image = UIImage(named: itemsInfo[i])?.imageWithRenderingMode(.AlwaysOriginal)
+            item.selectedImage = UIImage(named:itemsInfo[i] + "_highlighted")?.imageWithRenderingMode(.AlwaysOriginal)
+        }
+    }
+    
+//    private func addChildViewController(childVC: UIViewController ,imageName: String ,title: String)
+//    {
+//        let navVC = MainNavigationController(rootViewController: childVC)
+//        childVC.navigationItem.title = title
+//        navVC.tabBarItem.title = title
+//        navVC.tabBarItem.image = UIImage(named:imageName )?.imageWithRenderingMode(.AlwaysOriginal)
+//        navVC.tabBarItem.selectedImage = UIImage(named: imageName + "_highlighted")?.imageWithRenderingMode(.AlwaysOriginal)
+//        addChildViewController(navVC)
+//    }
     
 
 

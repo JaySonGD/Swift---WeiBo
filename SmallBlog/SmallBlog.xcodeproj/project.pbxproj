@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		ABADB52E1C813D9500BA8907 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB52D1C813D9500BA8907 /* AppDelegate.swift */; };
-		ABADB5301C813D9500BA8907 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB52F1C813D9500BA8907 /* ViewController.swift */; };
 		ABADB5331C813D9500BA8907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABADB5311C813D9500BA8907 /* Main.storyboard */; };
 		ABADB5351C813D9500BA8907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABADB5341C813D9500BA8907 /* Assets.xcassets */; };
 		ABADB5381C813D9500BA8907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABADB5361C813D9500BA8907 /* LaunchScreen.storyboard */; };
 		ABADB5431C813D9500BA8907 /* SmallBlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5421C813D9500BA8907 /* SmallBlogTests.swift */; };
 		ABADB54E1C813D9500BA8907 /* SmallBlogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB54D1C813D9500BA8907 /* SmallBlogUITests.swift */; };
+		ABADB5D81C81B70300BA8907 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5D71C81B70300BA8907 /* MainTabBarController.swift */; };
+		ABADB5DA1C81B75500BA8907 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5D91C81B75500BA8907 /* MainNavigationController.swift */; };
+		ABADB5DC1C81B78400BA8907 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5DB1C81B78400BA8907 /* HomeViewController.swift */; };
+		ABADB5DE1C81B79A00BA8907 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5DD1C81B79A00BA8907 /* DiscoverViewController.swift */; };
+		ABADB5E21C81B7CA00BA8907 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5E11C81B7CA00BA8907 /* MessageViewController.swift */; };
+		ABADB5E41C81B7EC00BA8907 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5E31C81B7EC00BA8907 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		ABADB52A1C813D9500BA8907 /* SmallBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmallBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABADB52D1C813D9500BA8907 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ABADB52F1C813D9500BA8907 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABADB5321C813D9500BA8907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABADB5341C813D9500BA8907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABADB5371C813D9500BA8907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		ABADB5491C813D9500BA8907 /* SmallBlogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallBlogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABADB54D1C813D9500BA8907 /* SmallBlogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBlogUITests.swift; sourceTree = "<group>"; };
 		ABADB54F1C813D9500BA8907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABADB5D71C81B70300BA8907 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		ABADB5D91C81B75500BA8907 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		ABADB5DB1C81B78400BA8907 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ABADB5DD1C81B79A00BA8907 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		ABADB5E11C81B7CA00BA8907 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		ABADB5E31C81B7EC00BA8907 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				ABADB52D1C813D9500BA8907 /* AppDelegate.swift */,
-				ABADB52F1C813D9500BA8907 /* ViewController.swift */,
+				ABADB5CF1C81790F00BA8907 /* Classes */,
 				ABADB5311C813D9500BA8907 /* Main.storyboard */,
 				ABADB5341C813D9500BA8907 /* Assets.xcassets */,
 				ABADB5361C813D9500BA8907 /* LaunchScreen.storyboard */,
@@ -123,6 +133,75 @@
 				ABADB54F1C813D9500BA8907 /* Info.plist */,
 			);
 			path = SmallBlogUITests;
+			sourceTree = "<group>";
+		};
+		ABADB5CF1C81790F00BA8907 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ABADB5D01C81790F00BA8907 /* Compose */,
+				ABADB5D11C81790F00BA8907 /* Discover */,
+				ABADB5D21C81790F00BA8907 /* Home(主页) */,
+				ABADB5D31C81790F00BA8907 /* Main */,
+				ABADB5D41C81790F00BA8907 /* Message(消息) */,
+				ABADB5D51C81790F00BA8907 /* Others */,
+				ABADB5D61C81790F00BA8907 /* Profile(我的) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		ABADB5D01C81790F00BA8907 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		ABADB5D11C81790F00BA8907 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				ABADB5DD1C81B79A00BA8907 /* DiscoverViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		ABADB5D21C81790F00BA8907 /* Home(主页) */ = {
+			isa = PBXGroup;
+			children = (
+				ABADB5DB1C81B78400BA8907 /* HomeViewController.swift */,
+			);
+			path = "Home(主页)";
+			sourceTree = "<group>";
+		};
+		ABADB5D31C81790F00BA8907 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				ABADB5D71C81B70300BA8907 /* MainTabBarController.swift */,
+				ABADB5D91C81B75500BA8907 /* MainNavigationController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		ABADB5D41C81790F00BA8907 /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				ABADB5E11C81B7CA00BA8907 /* MessageViewController.swift */,
+			);
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		ABADB5D51C81790F00BA8907 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		ABADB5D61C81790F00BA8907 /* Profile(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				ABADB5E31C81B7EC00BA8907 /* ProfileViewController.swift */,
+			);
+			path = "Profile(我的)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +338,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABADB5301C813D9500BA8907 /* ViewController.swift in Sources */,
+				ABADB5DA1C81B75500BA8907 /* MainNavigationController.swift in Sources */,
+				ABADB5D81C81B70300BA8907 /* MainTabBarController.swift in Sources */,
 				ABADB52E1C813D9500BA8907 /* AppDelegate.swift in Sources */,
+				ABADB5DC1C81B78400BA8907 /* HomeViewController.swift in Sources */,
+				ABADB5E41C81B7EC00BA8907 /* ProfileViewController.swift in Sources */,
+				ABADB5DE1C81B79A00BA8907 /* DiscoverViewController.swift in Sources */,
+				ABADB5E21C81B7CA00BA8907 /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = SmallBlog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -412,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = SmallBlog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

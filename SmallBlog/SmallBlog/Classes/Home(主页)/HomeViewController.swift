@@ -20,12 +20,33 @@ class HomeViewController: BaseViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         visitorV?.rotationAnima()
+        
+        
+        guard isLogin else{
+            setUpNavItems()
+            return
+        }
+        
+        addNavItems()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // ********************************************************************************************************
+    // MARK: - < 自定方法 >
+    
+    private func addNavItems(){
+        navigationItem.leftBarButtonItem = UIBarButtonItem.barButtonItem("navigationbar_friendattention", highlightedImageName: "navigationbar_friendattention_highlighted", target: self, action: "")
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem.barButtonItem("navigationbar_pop", highlightedImageName: "navigationbar_pop_highlighted" ,target: self, action: "")
+        
+        
+    }
+
 
     // MARK: - Table view data source
 

@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UITableViewController {
 
     // MARK: - 属性
-    var isLogin = !true
+    var isLogin = true
     
     var visitorV : VisitorView?
     
@@ -24,12 +24,9 @@ class BaseViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +40,28 @@ class BaseViewController: UITableViewController {
         
         view = VisitorView.visitorView()
         visitorV = view as? VisitorView
+        
+        visitorV?.loginBtn .addTarget(self, action: "loginClick", forControlEvents: .TouchUpInside)
+        visitorV?.registerBtn.addTarget(self, action: "loginClick", forControlEvents: .TouchUpInside)
+    }
+    
+    func setUpNavItems()
+    {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .Done, target: self, action: "registerClick")
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .Done, target: self, action: "loginClick")
+    }
+    
+    // ********************************************************************************************************
+    // MARK: - < 事件监听 >
+    
+    @objc private func loginClick(){
+        print(__FUNCTION__)
+    }
+
+    
+    @objc private func registerClick(){
+        print(__FUNCTION__)
     }
 
 

@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - 主题tabBar
         UITabBar.appearance().tintColor = UIColor.orangeColor()
+        UINavigationBar.appearance().tintColor = UIColor.orangeColor()
         
 //        window = UIWindow(frame:UIScreen.mainScreen().bounds)
 //        window?.backgroundColor = UIColor.orangeColor()

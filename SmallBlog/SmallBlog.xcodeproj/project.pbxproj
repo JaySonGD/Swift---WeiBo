@@ -27,6 +27,7 @@
 		ABADB5DE1C81B79A00BA8907 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5DD1C81B79A00BA8907 /* DiscoverViewController.swift */; };
 		ABADB5E21C81B7CA00BA8907 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5E11C81B7CA00BA8907 /* MessageViewController.swift */; };
 		ABADB5E41C81B7EC00BA8907 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5E31C81B7EC00BA8907 /* ProfileViewController.swift */; };
+		ABB9A3A81C832D430008825E /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9A3A71C832D430008825E /* UIBarButtonItem+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		ABADB5DD1C81B79A00BA8907 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		ABADB5E11C81B7CA00BA8907 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		ABADB5E31C81B7EC00BA8907 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		ABB9A3A71C832D430008825E /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				AB3709B81C81CD4600CE21A4 /* UIButton+Extension.swift */,
+				ABB9A3A71C832D430008825E /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				AB3709C61C81E97500CE21A4 /* MainTabBarController.swift in Sources */,
 				ABADB52E1C813D9500BA8907 /* AppDelegate.swift in Sources */,
 				ABADB5DC1C81B78400BA8907 /* HomeViewController.swift in Sources */,
+				ABB9A3A81C832D430008825E /* UIBarButtonItem+Extension.swift in Sources */,
 				AB3709C01C81E45900CE21A4 /* BaseViewController.swift in Sources */,
 				ABADB5E41C81B7EC00BA8907 /* ProfileViewController.swift in Sources */,
 				ABADB5DE1C81B79A00BA8907 /* DiscoverViewController.swift in Sources */,

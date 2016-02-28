@@ -10,24 +10,17 @@ import UIKit
 
 class VisitorView: UIView {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+
+    // MARK: - < 属性 >
+    
     @IBOutlet weak var rotationView: UIImageView!
-    
     @IBOutlet weak var iconView: UIImageView!
-    
     @IBOutlet weak var textLable: UILabel!
     
     
     @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
     
-    // ********************************************************************************************************
     // MARK: - < load view >
 
     class func visitorView() -> VisitorView{
@@ -35,7 +28,6 @@ class VisitorView: UIView {
     }
     
     
-    // ********************************************************************************************************
     // MARK: - < rotationAnima >
     
     func rotationAnima(){
@@ -50,6 +42,15 @@ class VisitorView: UIView {
         
         rotationView.layer .addAnimation(anima, forKey: nil)
     }
+
+    // MARK: - < 自定义方法 >
+    
+    func setVisitorViewInfo(icon: String , title: String){
+        iconView.image = UIImage(named: icon)
+        textLable.text = title
+        rotationView.hidden = true
+    }
+    
 
 
 }

@@ -28,6 +28,10 @@
 		ABADB5E21C81B7CA00BA8907 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5E11C81B7CA00BA8907 /* MessageViewController.swift */; };
 		ABADB5E41C81B7EC00BA8907 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABADB5E31C81B7EC00BA8907 /* ProfileViewController.swift */; };
 		ABB9A3A81C832D430008825E /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9A3A71C832D430008825E /* UIBarButtonItem+Extension.swift */; };
+		ABB9A3AA1C83397C0008825E /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9A3A91C83397C0008825E /* TitleButton.swift */; };
+		ABB9A3AE1C833B0A0008825E /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9A3AC1C833B0A0008825E /* PopoverView.swift */; };
+		ABB9A3AF1C833B0A0008825E /* PopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB9A3AD1C833B0A0008825E /* PopoverView.xib */; };
+		ABB9A3B11C8341A40008825E /* CZPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9A3B01C8341A40008825E /* CZPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		ABADB5E11C81B7CA00BA8907 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		ABADB5E31C81B7EC00BA8907 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		ABB9A3A71C832D430008825E /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		ABB9A3A91C83397C0008825E /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		ABB9A3AC1C833B0A0008825E /* PopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
+		ABB9A3AD1C833B0A0008825E /* PopoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverView.xib; sourceTree = "<group>"; };
+		ABB9A3B01C8341A40008825E /* CZPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,8 +203,10 @@
 		ABADB5D21C81790F00BA8907 /* Home(主页) */ = {
 			isa = PBXGroup;
 			children = (
+				ABB9A3AB1C833AD00008825E /* PopoverView */,
 				ABADB5DB1C81B78400BA8907 /* HomeViewController.swift */,
 				AB3709AC1C81C05100CE21A4 /* Home.storyboard */,
+				ABB9A3A91C83397C0008825E /* TitleButton.swift */,
 			);
 			path = "Home(主页)";
 			sourceTree = "<group>";
@@ -237,6 +247,16 @@
 				AB3709B51C81C0DC00CE21A4 /* Profile.storyboard */,
 			);
 			path = "Profile(我的)";
+			sourceTree = "<group>";
+		};
+		ABB9A3AB1C833AD00008825E /* PopoverView */ = {
+			isa = PBXGroup;
+			children = (
+				ABB9A3AC1C833B0A0008825E /* PopoverView.swift */,
+				ABB9A3AD1C833B0A0008825E /* PopoverView.xib */,
+				ABB9A3B01C8341A40008825E /* CZPresentationController.swift */,
+			);
+			path = PopoverView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +371,7 @@
 				AB3709B11C81C07900CE21A4 /* Message.storyboard in Resources */,
 				AB3709C41C81E4A900CE21A4 /* VisitorView.xib in Resources */,
 				ABADB5331C813D9500BA8907 /* Main.storyboard in Resources */,
+				ABB9A3AF1C833B0A0008825E /* PopoverView.xib in Resources */,
 				AB3709AE1C81C05100CE21A4 /* Home.storyboard in Resources */,
 				AB3709B71C81C0DC00CE21A4 /* Profile.storyboard in Resources */,
 				AB3709B41C81C0AB00CE21A4 /* Discover.storyboard in Resources */,
@@ -388,7 +409,10 @@
 				ABADB5E41C81B7EC00BA8907 /* ProfileViewController.swift in Sources */,
 				ABADB5DE1C81B79A00BA8907 /* DiscoverViewController.swift in Sources */,
 				ABADB5E21C81B7CA00BA8907 /* MessageViewController.swift in Sources */,
+				ABB9A3AA1C83397C0008825E /* TitleButton.swift in Sources */,
 				AB3709B91C81CD4600CE21A4 /* UIButton+Extension.swift in Sources */,
+				ABB9A3B11C8341A40008825E /* CZPresentationController.swift in Sources */,
+				ABB9A3AE1C833B0A0008825E /* PopoverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,6 +37,7 @@
 		ABB9A3AE1C833B0A0008825E /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9A3AC1C833B0A0008825E /* PopoverView.swift */; };
 		ABB9A3AF1C833B0A0008825E /* PopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB9A3AD1C833B0A0008825E /* PopoverView.xib */; };
 		ABB9A3B11C8341A40008825E /* CZPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9A3B01C8341A40008825E /* CZPresentationController.swift */; };
+		ABE876C01C843437000A5F25 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE876BF1C843437000A5F25 /* UserInfo.swift */; };
 		EC5DA9AF49B618BACC5A65EF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02A10D1CC39DA171EBA517C /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		ABB9A3AC1C833B0A0008825E /* PopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		ABB9A3AD1C833B0A0008825E /* PopoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverView.xib; sourceTree = "<group>"; };
 		ABB9A3B01C8341A40008825E /* CZPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZPresentationController.swift; sourceTree = "<group>"; };
+		ABE876BF1C843437000A5F25 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				AB79E17C1C84172C007A40EF /* Oauth2ViewController.swift */,
 				AB79E17D1C84172C007A40EF /* Oauth2ViewController.xib */,
+				ABE876BF1C843437000A5F25 /* UserInfo.swift */,
 			);
 			path = Oauth2;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABE876C01C843437000A5F25 /* UserInfo.swift in Sources */,
 				AB79E17A1C8413EA007A40EF /* Common.swift in Sources */,
 				AB3709C21C81E49A00CE21A4 /* VisitorView.swift in Sources */,
 				ABADB5DA1C81B75500BA8907 /* MainNavigationController.swift in Sources */,

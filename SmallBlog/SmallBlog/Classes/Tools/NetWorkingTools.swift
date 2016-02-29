@@ -68,16 +68,6 @@ extension NetWorkingTools {
     
 
     class func getAccessToken(code: String , success: ((data: [String: AnyObject]?) -> Void)? , failure: ((error: NSError) -> ())?  ) {
-        
-//        client_id	true	string	申请应用时分配的AppKey。
-//        client_secret	true	string	申请应用时分配的AppSecret。
-//        grant_type	true	string	请求的类型，填写authorization_code
-//        
-//        grant_type为authorization_code时
-//        必选	类型及范围	说明
-//        code	true	string	调用authorize获得的code值。
-//        redirect_uri	true	string	回调地址，需需与注册应用里的回调地址一致。
-
         let parameters = ["client_id": AppKey,"client_secret": AppSecret,"grant_type": "authorization_code","code": code,"redirect_uri": RedirectURL]
         
         NetWorkingTools.shareTool.Request(.POST, urlString: Oauth2AccessTokenURL, parameters: parameters, success: { (data) -> Void in
@@ -89,5 +79,35 @@ extension NetWorkingTools {
                 failure!(error: error)
         }
     }
+    
+    
+    class func getUsersShow(userInfo: UserInfo,success: ((data: [String: AnyObject]?) -> Void)? , failure: ((error: NSError?) -> ())? )
+        {
+//            access_token	true	string	采用OAuth授权方式为必填参数，OAuth授权后获得。
+//            uid	false	int64	需要查询的用户ID。
+//            screen_name	false	string	需要查询的用户昵称。
+            let parameters = ["access_token": userInfo.access_token!, "uid": userInfo.uid!]
+            
+            NetWorkingTools.shareTool.Request(.GET, urlString: UsersShowURL, parameters: parameters, success: { (data) -> Void in
+                
+                success!(data: data)
+
+                }) { (error) -> () in
+                    failure!(error: error)   
+            }
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }

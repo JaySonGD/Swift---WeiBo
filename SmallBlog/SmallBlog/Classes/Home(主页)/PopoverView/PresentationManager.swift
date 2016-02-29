@@ -11,7 +11,9 @@ import UIKit
 class PresentationManager: NSObject {
 
     // MARK: - 属性
-    var orighFrame: CGRect?
+    var modalFrame: CGRect?
+    
+    var finished: ((isSelected : Bool) -> ())?
 
     
     
@@ -27,11 +29,11 @@ extension PresentationManager: UIViewControllerTransitioningDelegate{
         
         let present = CZPresentationController(presentedViewController: presented, presentingViewController: presenting)
         
-        guard orighFrame != nil else{
+        guard modalFrame != nil else{
             return present
         }
         
-        present.modelFrame = orighFrame!
+        present.modalFrame = modalFrame!
         
         return present
     }
@@ -60,6 +62,8 @@ extension PresentationManager: UIViewControllerAnimatedTransitioning{
             
             transitionContext.containerView()?.addSubview((modelView))
             
+            finished!(isSelected: true)
+            
             modelView.transform = CGAffineTransformMakeScale(1.0, 0.0)
             modelView.layer.anchorPoint = CGPoint(x: 0.5, y: 0)
             
@@ -78,7 +82,8 @@ extension PresentationManager: UIViewControllerAnimatedTransitioning{
             let dismissView = transitionContext.viewForKey(UITransitionContextFromViewKey)
             
             transitionContext.containerView()?.addSubview((dismissView)!)
-            
+            finished!(isSelected: !true)
+
             
             UIView .animateWithDuration(transitionDuration(transitionContext), animations: { () -> Void in
                 

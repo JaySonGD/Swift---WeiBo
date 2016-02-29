@@ -11,10 +11,27 @@ import UIKit
 class HomeViewController: BaseViewController {
     
     // MARK: - 属性
+    lazy var titleBtn: TitleButton = {
+       
+        let titleBtn = TitleButton(type: .Custom)
+        titleBtn.setTitle("JaySonGD", forState: .Normal)
+        titleBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        titleBtn.setImage(UIImage(named: "navigationbar_arrow_down"), forState: .Normal)
+        titleBtn.setImage(UIImage(named: "navigationbar_arrow_up"), forState: .Selected)
+        titleBtn.addTarget(self, action: "titleClick:", forControlEvents: .TouchDown)
+        titleBtn.sizeToFit()
+        return titleBtn
+    }()
+    
     lazy var PresentationMgr: PresentationManager = {
         
         let mgr = PresentationManager()
-        //mgr.orighFrame = CGRect(x: 100, y: 60, width: 180, height: 500)
+//        mgr.modalFrame = CGRect(x: 100, y: 60, width: 180, height: 500)
+        
+        mgr.finished = {[weak self](isSelected : Bool) -> () in
+            
+            self!.titleBtn.selected = isSelected
+        }
 
         return mgr
     }()
@@ -57,13 +74,7 @@ class HomeViewController: BaseViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem.barButtonItem("navigationbar_pop", highlightedImageName: "navigationbar_pop_highlighted" ,target: self, action: "")
         
-        let titleBtn = TitleButton(type: .Custom)
-        titleBtn.setTitle("JaySonGD", forState: .Normal)
-        titleBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        titleBtn.setImage(UIImage(named: "navigationbar_arrow_down"), forState: .Normal)
-        titleBtn.setImage(UIImage(named: "navigationbar_arrow_up"), forState: .Selected)
-        titleBtn.addTarget(self, action: "titleClick:", forControlEvents: .TouchDown)
-        titleBtn.sizeToFit()
+ 
         navigationItem.titleView = titleBtn
         
     }
@@ -73,7 +84,7 @@ class HomeViewController: BaseViewController {
     
     @objc private func titleClick(titleBtn: UIButton){
         
-        titleBtn.selected = !titleBtn.selected
+//        titleBtn.selected = !titleBtn.selected
         print(__FUNCTION__)
         
         let popVC = PopoverView()

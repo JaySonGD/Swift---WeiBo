@@ -9,13 +9,25 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
+    
+    // MARK: - 属性
+    lazy var PresentationMgr: PresentationManager = {
+        
+        let mgr = PresentationManager()
+        //mgr.orighFrame = CGRect(x: 100, y: 60, width: 180, height: 500)
 
+        return mgr
+    }()
+    
+    // MARK: **************************************************************************************************
+    // MARK: - < Life Cylc >
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
@@ -31,7 +43,7 @@ class HomeViewController: BaseViewController {
         addNavItems()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -55,31 +67,23 @@ class HomeViewController: BaseViewController {
         navigationItem.titleView = titleBtn
         
     }
-
+    
     // ********************************************************************************************************
     // MARK: - < 事件监听 >
     
     @objc private func titleClick(titleBtn: UIButton){
-    
+        
         titleBtn.selected = !titleBtn.selected
         print(__FUNCTION__)
         
         let popVC = PopoverView()
         //防止背后的视图
         popVC.modalPresentationStyle = .Custom
-        popVC.transitioningDelegate = self
+        popVC.transitioningDelegate = PresentationMgr
         
         presentViewController(popVC, animated: true, completion: nil)
     }
-
-
-}
-
-extension HomeViewController :UIViewControllerTransitioningDelegate{
     
-    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        
-        return CZPresentationController(presentedViewController: presented, presentingViewController: presenting)
-    }
     
 }
+

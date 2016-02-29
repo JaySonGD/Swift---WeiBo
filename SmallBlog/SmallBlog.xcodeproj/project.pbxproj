@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1CB1E21C83EF7100FD7C1F /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1CB1E11C83EF7100FD7C1F /* PresentationManager.swift */; };
 		AB3709AE1C81C05100CE21A4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3709AC1C81C05100CE21A4 /* Home.storyboard */; };
 		AB3709B11C81C07900CE21A4 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3709AF1C81C07900CE21A4 /* Message.storyboard */; };
 		AB3709B41C81C0AB00CE21A4 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3709B21C81C0AB00CE21A4 /* Discover.storyboard */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB1CB1E11C83EF7100FD7C1F /* PresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
 		AB3709AD1C81C05100CE21A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		AB3709B01C81C07900CE21A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Message.storyboard; sourceTree = "<group>"; };
 		AB3709B31C81C0AB00CE21A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				ABB9A3AC1C833B0A0008825E /* PopoverView.swift */,
 				ABB9A3AD1C833B0A0008825E /* PopoverView.xib */,
 				ABB9A3B01C8341A40008825E /* CZPresentationController.swift */,
+				AB1CB1E11C83EF7100FD7C1F /* PresentationManager.swift */,
 			);
 			path = PopoverView;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				ABB9A3AA1C83397C0008825E /* TitleButton.swift in Sources */,
 				AB3709B91C81CD4600CE21A4 /* UIButton+Extension.swift in Sources */,
 				ABB9A3B11C8341A40008825E /* CZPresentationController.swift in Sources */,
+				AB1CB1E21C83EF7100FD7C1F /* PresentationManager.swift in Sources */,
 				ABB9A3AE1C833B0A0008825E /* PopoverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

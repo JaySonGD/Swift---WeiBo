@@ -26,7 +26,7 @@ class HomeViewController: BaseViewController {
     lazy var PresentationMgr: PresentationManager = {
         
         let mgr = PresentationManager()
-//        mgr.modalFrame = CGRect(x: 100, y: 60, width: 180, height: 500)
+        //mgr.modalFrame = CGRect(x: 100, y: 60, width: 180, height: 500)
         
         mgr.finished = {[weak self](isSelected : Bool) -> () in
             
@@ -41,16 +41,9 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
         
         visitorV?.rotationAnima()
-        
-        
         
         guard isLogin else{
             setUpNavItems()
@@ -59,6 +52,8 @@ class HomeViewController: BaseViewController {
         
         addNavItems()
         
+
+
     }
     
     override func didReceiveMemoryWarning() {

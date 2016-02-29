@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UITableViewController {
 
     // MARK: - 属性
-    var isLogin = true
+    var isLogin = !true
     
     var visitorV : VisitorView?
     
@@ -57,6 +57,12 @@ class BaseViewController: UITableViewController {
     
     @objc private func loginClick(){
         print(__FUNCTION__)
+        
+        let NavVC = MainNavigationController(rootViewController: Oauth2ViewController())
+        presentViewController(NavVC, animated: true, completion: nil)
+        
+        
+
     }
 
     

@@ -29,7 +29,7 @@ class UserInfo: NSObject , NSCoding{
     var screen_name: String?
     /// 头像
     var profile_image_url: String?
-    
+    /// 有效期
     var effective_date: NSDate?
     
     
@@ -65,6 +65,7 @@ class UserInfo: NSObject , NSCoding{
         uid = aDecoder.decodeObjectForKey("uid") as? String
         screen_name = aDecoder.decodeObjectForKey("screen_name") as? String
         effective_date = aDecoder.decodeObjectForKey("effective_date") as? NSDate
+        profile_image_url = aDecoder.decodeObjectForKey("profile_image_url") as? String
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
@@ -73,6 +74,7 @@ class UserInfo: NSObject , NSCoding{
         aCoder.encodeObject(uid, forKey: "uid")
         aCoder.encodeObject(screen_name, forKey: "screen_name")
         aCoder.encodeObject(effective_date, forKey: "effective_date")
+        aCoder.encodeObject(profile_image_url, forKey: "profile_image_url")
     }
     
     // ********************************************************************************************************

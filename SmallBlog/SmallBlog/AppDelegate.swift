@@ -21,11 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.orangeColor()
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
         
-//        window = UIWindow(frame:UIScreen.mainScreen().bounds)
-//        window?.backgroundColor = UIColor.orangeColor()
-//        let tabBarVC = MainTabBarController()
-//        window?.rootViewController = tabBarVC
-//        window?.makeKeyAndVisible()
+        window = UIWindow(frame:UIScreen.mainScreen().bounds)
+        window?.backgroundColor = UIColor.orangeColor()
+        //let tabBarVC = MainTabBarController()
+        window?.rootViewController = UserInfoModel.shareUserInfoModel.isLogin ? WelcomeViewController():UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+ 
+            
+            
+        window?.makeKeyAndVisible()
         
         return true
     }

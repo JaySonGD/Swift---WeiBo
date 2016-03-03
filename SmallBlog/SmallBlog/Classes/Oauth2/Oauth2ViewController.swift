@@ -22,25 +22,22 @@ class Oauth2ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
         navigationItem.title = "登录页面"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "关闭", style: .Done, target: self, action: "closeLogin")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "填充", style: .Done, target: self, action: "autoLogin")
         
         guard let url = NSURL(string: Oauth2AuthorizeURL) else{
+            
             return
         }
         
-        
-        let request = NSURLRequest(URL: url)
-        loginView.loadRequest(request)
-        
+        loginView.loadRequest(NSURLRequest(URL: url))
     }
     
     
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -56,22 +53,22 @@ class Oauth2ViewController: UIViewController {
         
         loginView.stringByEvaluatingJavaScriptFromString(JavaScriptCode)
     }
-    
-    
-    
 }
 
 
 extension Oauth2ViewController: UIWebViewDelegate{
+    // MARK: **************************************************************************************************
+    // MARK: - < UIWebViewDelegate >
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         
         SVProgressHUD.dismiss()
     }
     func webViewDidFinishLoad(webView: UIWebView) {
-        SVProgressHUD.dismiss()
         
+        SVProgressHUD.dismiss()
     }
     func webViewDidStartLoad(webView: UIWebView) {
+        
         SVProgressHUD .show()
     }
     
@@ -80,14 +77,17 @@ extension Oauth2ViewController: UIWebViewDelegate{
         print(request.URL?.absoluteString)
         
         guard let urlString = request.URL?.absoluteString else{
+            
             print("还没有urlstring")
             return true
         }
         guard urlString.containsString("code=") else {
+            
             print("还没有加载code,继续加载页面")
             return true
         }
         guard let code = urlString.componentsSeparatedByString("code=").last else{
+            
             print("还没有加载到code,继续加载页面")
             return true
         }
@@ -95,25 +95,30 @@ extension Oauth2ViewController: UIWebViewDelegate{
         NetWorkingTools.getAccessToken(code, success: { (data) -> Void in
             
             let userInfo = UserInfo(dict: data!)
+            
             NetWorkingTools.getUsersShow(userInfo, success: { (data) -> Void in
                 
                 userInfo.screen_name = data!["screen_name"] as? String
                 userInfo.profile_image_url = data!["profile_image_url"] as? String
                 
                 print((data! as NSDictionary))
-                
+    
                 userInfo.saveUserInfo()
-                
                 print(userInfo.readUserInfo())
+                print("登录成功")
+                
+                UserInfoModel.shareUserInfoModel.userInfo = userInfo
+                
+                UIApplication.sharedApplication().keyWindow?.rootViewController = UserInfoModel.shareUserInfoModel.isLogin ? WelcomeViewController():UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
                 
                 }, failure: { (error) -> () in
-                    print("还没有加载到userInfo,继续加载页面")
-
                     
+                    print("还没有加载到userInfo,继续加载页面")
                 })
             
             
             }) { (error) -> () in
+                
                 print("还没有加载到token,继续加载页面")
                 print(error)
         }

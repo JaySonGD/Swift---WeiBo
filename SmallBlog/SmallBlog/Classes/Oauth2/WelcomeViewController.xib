@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="SmallBlog" customModuleProvider="target">
+            <connections>
+                <outlet property="iconView" destination="SgD-oy-jcV" id="VZy-OX-YgZ"/>
+                <outlet property="iconViewB" destination="gjx-rA-KeY" id="urI-Sg-bPa"/>
+                <outlet property="textLable" destination="cLW-Qw-dUF" id="oVX-Hk-bLo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_background" translatesAutoresizingMaskIntoConstraints="NO" id="3st-8e-Yhg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLW-Qw-dUF">
+                    <rect key="frame" x="159" y="437" width="56" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="SgD-oy-jcV">
+                    <rect key="frame" x="145" y="332" width="85" height="85"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="85" id="nIC-p0-kwC"/>
+                        <constraint firstAttribute="width" constant="85" id="p1C-df-rZ1"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="42.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" value="YES">
+                            <string key="keyPath">layer.masksToBounds
+</string>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3st-8e-Yhg" secondAttribute="bottom" id="20u-09-V9k"/>
+                <constraint firstItem="SgD-oy-jcV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2hv-iu-xd4"/>
+                <constraint firstAttribute="bottom" secondItem="SgD-oy-jcV" secondAttribute="bottom" constant="250" id="M1i-pi-JKn"/>
+                <constraint firstAttribute="trailing" secondItem="3st-8e-Yhg" secondAttribute="trailing" id="PD0-rH-0iq"/>
+                <constraint firstItem="SgD-oy-jcV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="R5s-RU-jjD"/>
+                <constraint firstItem="cLW-Qw-dUF" firstAttribute="top" secondItem="SgD-oy-jcV" secondAttribute="bottom" constant="20" id="XLR-Ce-ZWF"/>
+                <constraint firstItem="3st-8e-Yhg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f23-Rg-iYO"/>
+                <constraint firstAttribute="bottom" secondItem="SgD-oy-jcV" secondAttribute="bottom" constant="250" id="gjx-rA-KeY"/>
+                <constraint firstItem="3st-8e-Yhg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="k7m-Ya-m92"/>
+                <constraint firstItem="cLW-Qw-dUF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lUn-Zx-74v"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="2hv-iu-xd4"/>
+                    <exclude reference="M1i-pi-JKn"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="508" y="310"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ad_background" width="375" height="667"/>
+        <image name="avatar_default_big" width="85" height="85"/>
+    </resources>
+</document>

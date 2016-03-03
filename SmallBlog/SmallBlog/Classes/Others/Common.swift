@@ -22,6 +22,9 @@ let Oauth2AccessTokenURL = "https://api.weibo.com/oauth2/access_token"
 /// 获取用户URL
 let UsersShowURL = "https://api.weibo.com/2/users/show.json"
 
+/// 主页微博
+let StatusesHomeTimeLineURL = "https://api.weibo.com/2/statuses/home_timeline.json"
+
 /// UserInfo路径
 let UserInfoPath = ((NSSearchPathForDirectoriesInDomains( .DocumentDirectory,.UserDomainMask, true).last)! as NSString).stringByAppendingPathComponent("userInfo.plist")
 

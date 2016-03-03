@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UITableViewController {
 
     // MARK: - 属性
-    var isLogin = !true
+    var isLogin = UserInfoModel.shareUserInfoModel.isLogin 
     
     var visitorV : VisitorView?
     

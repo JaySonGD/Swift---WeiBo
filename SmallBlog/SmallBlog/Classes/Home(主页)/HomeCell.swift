@@ -85,18 +85,12 @@ class HomeCell: UITableViewCell {
     }
     
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        
-    }
-    
 }
 
 
 
 
-extension HomeCell: UICollectionViewDataSource{
+extension HomeCell: UICollectionViewDataSource , UICollectionViewDelegate{
  
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return status?.picUrls?.count ?? 0
@@ -112,4 +106,13 @@ extension HomeCell: UICollectionViewDataSource{
         
         return cell
     }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        print(indexPath.item)
+        
+        let userInfo = ["IndexPathKey": indexPath, "PicURLsKey": (status?.picUrls)!]
+        NSNotificationCenter.defaultCenter().postNotificationName(SeeBigImage, object: self, userInfo: userInfo)
+    }
+    
 }

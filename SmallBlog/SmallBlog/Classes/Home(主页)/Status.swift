@@ -58,6 +58,5 @@ class Status: NSObject {
 
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         
-        print(key)
     }
 }

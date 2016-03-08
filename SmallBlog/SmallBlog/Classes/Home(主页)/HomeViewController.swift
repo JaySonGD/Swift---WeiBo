@@ -47,7 +47,8 @@ class HomeViewController: BaseViewController {
         lable.font = UIFont.systemFontOfSize(13)
         lable.textColor = UIColor.whiteColor()
         lable.backgroundColor = UIColor.orangeColor()
-        
+        lable.alpha = 0
+
         return lable
         
     }()
@@ -74,6 +75,8 @@ class HomeViewController: BaseViewController {
         navigationController?.navigationBar.insertSubview(tipLable, atIndex: 0)
         
         initRefresh()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "seeBigImage:", name: SeeBigImage, object: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,6 +84,9 @@ class HomeViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
     // ********************************************************************************************************
     // MARK: - < 自定方法 >
     
@@ -139,6 +145,7 @@ class HomeViewController: BaseViewController {
             
             let newStatuses = data!["statuses"] as! [[String: AnyObject]]?
             var newStatusModel: [StatusDataModel] = [StatusDataModel]()
+            print(data)
             
             for statusDict in newStatuses!{
                 
@@ -159,8 +166,14 @@ class HomeViewController: BaseViewController {
             
             [UIView .animateWithDuration(0.5, animations: { () -> Void in
                 self.tipLable.hidden = !true
-                self.tipLable.text = "\(newStatusModel.count)条新微薄"
+                if newStatusModel.count > 0 {
+                    self.tipLable.text = "加载\(newStatusModel.count)条微薄"
+                }
+                else{
+                    self.tipLable.text = "没有最新微薄"
+                }
                 self.tipLable.transform = CGAffineTransformMakeTranslation(0, 40)
+                self.tipLable.alpha = 1.0
                 }, completion: { (isFinished) -> Void in
                     
                     [UIView .animateWithDuration(0.5, delay: 0.5, options: [], animations: { () -> Void in
@@ -168,6 +181,7 @@ class HomeViewController: BaseViewController {
                         self.tipLable.transform = CGAffineTransformIdentity
                         }, completion: { (isFinished) -> Void in
                             self.tipLable.hidden = true
+                            self.tipLable.alpha = 0
                     })]
             })]
             
@@ -189,6 +203,13 @@ class HomeViewController: BaseViewController {
     
     // ********************************************************************************************************
     // MARK: - < 事件监听 >
+    
+    @objc private func seeBigImage(noti: NSNotification){
+        
+        let dict = noti.userInfo as! [String: AnyObject]
+        let seeBigVC = SeeBigImageConroller(userInfo: dict)
+        presentViewController(seeBigVC, animated:true, completion: nil)
+    }
     
     @objc private func titleClick(titleBtn: UIButton){
         

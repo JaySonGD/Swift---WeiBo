@@ -6,7 +6,7 @@
 //  Copyright © 2016年 czljcb. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 let AppKey = "730946570"
@@ -31,4 +31,11 @@ let UserInfoPath = ((NSSearchPathForDirectoriesInDomains( .DocumentDirectory,.Us
 /// 自动填充账号和密码
 let JavaScriptCode = "document.getElementById('userId').value='13760004725';document.getElementById('passwd').value='czljcb';"
 //let JavaScriptCode = "document.getElementById('userId').value='czljcb@163.com';document.getElementById('passwd').value='137291';"
+
+let SeeBigImage = "SeeBigImage"
+
+let iPhoneH = UIScreen.mainScreen().bounds.size.height
+let iPhoneW = UIScreen.mainScreen().bounds.size.width
+
+
 
